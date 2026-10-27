@@ -1,0 +1,2 @@
+- de 8 a 9 fuentes tienen que ser articulos academicos o libros
+- 30 citaciones en total
