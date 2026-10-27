@@ -172,14 +172,23 @@
               "icon": "lucide-archive",
               "title": "All properties"
             }
+          },
+          {
+            "id": "00a7c583c6d95bd4",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 358.5,
-    "collapsed": true
+    "width": 490.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -189,10 +198,11 @@
       "daily-notes:Abrir la nota de hoy": false,
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
-      "bases:Crear nueva base": false
+      "bases:Crear nueva base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cd163bb56635a48f",
+  "active": "00a7c583c6d95bd4",
   "lastOpenFiles": [
     "prueba.md",
     "Untitled.base"
