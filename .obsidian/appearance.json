@@ -1,7 +1,7 @@
 {
   "cssTheme": "Prism",
-  "interfaceFontFamily": "CaskaydiaCove Nerd Font",
-  "textFontFamily": "CaskaydiaCove Nerd Font",
+  "interfaceFontFamily": "",
+  "textFontFamily": "",
   "monospaceFontFamily": "CaskaydiaCove Nerd Font",
   "baseFontSizeAction": true
 }
