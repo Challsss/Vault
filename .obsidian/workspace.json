@@ -13,40 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Teoria e Historia de la Comunicación Interactiva/3 Postmodernidad y medios interactivos.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "3 Postmodernidad y medios interactivos"
-            }
-          },
-          {
-            "id": "18395ce894984273",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "Teoria e Historia de la Comunicación Interactiva/4 Introduccion Historica a Internet y la Web.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "4 Introduccion Historica a Internet y la Web"
-            }
-          },
-          {
-            "id": "931194b584e40189",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Teoria e Historia de la Comunicación Interactiva/1 Los Medios de Masas.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "1 Los Medios de Masas"
             }
           }
         ]
@@ -74,7 +46,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
-              "title": "Explorador de archivos"
+              "title": "Files"
             }
           },
           {
@@ -122,7 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "0f5636789bf9c981",
@@ -226,20 +198,20 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Abrir selector rápido": false,
-      "graph:Abrir vista gráfica": false,
-      "canvas:Crear nuevo lienzo": false,
-      "daily-notes:Abrir la nota de hoy": false,
-      "templates:Insertar plantilla": false,
-      "command-palette:Abrir paleta de comandos": false,
-      "bases:Crear nueva base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "00a7c583c6d95bd4",
+  "active": "cd163bb56635a48f",
   "lastOpenFiles": [
-    "Teoria e Historia de la Comunicación Interactiva/4 Introduccion Historica a Internet y la Web.md",
     "Teoria e Historia de la Comunicación Interactiva/3 Postmodernidad y medios interactivos.md",
+    "Teoria e Historia de la Comunicación Interactiva/4 Introduccion Historica a Internet y la Web.md",
     "Teoria e Historia de la Comunicación Interactiva/En el Enjambre.md",
     "Teoria e Historia de la Comunicación Interactiva/Primer Axioma de la Comunicación Humana.md",
     "Teoria e Historia de la Comunicación Interactiva/Trabajo.md",
