@@ -1,55 +1,55 @@
-> **Success**
-> prueba
+> [!success]
+>prueba
 
-> **Quote**
-> prueba
+> [!quote]
+>prueba
 
-> **Note**
-> prueba
+> [!note]
+>prueba
 
-> **Info**
-> prueba
+> [!info]
+>prueba
 
-> **Todo**
-> prueba
+> [!todo]
+>prueba
 
-> **Abstract**
-> prueba
+> [!abstract]
+>prueba
 
-> **Tip**
-> prueba
+> [!tip]
+>prueba
 
-> **Help**
-> prueba
+> [!help]
+>prueba
 
-> **Caution**
-> prueba
+> [!caution]
+>prueba
 
-> **Fail**
-> prueba
+> [!fail]
+>prueba
 
-> **Error**
-> prueba
+> [!error]
+>prueba
 
-> **Bug**
-> prueba
+> [!bug]
+>prueba
 
-> **Example**
-> prueba
+> [!example]
+>prueba
 
 Se pueden hacer citas desplegables añadiendo un '-' o un '+' justo después del bloque del título.
 
 El '-' hará que por defecto aparezca cerrada y se puede abrir con un clic en el encabezado como abajo .
 
-> **Info**
-> prueba
+> [!info]-
+>prueba
 
 Mientras que el '+' hará que por defecto aparezca abierta y que se pueda cerrar clicando en el encabezado.
 
-> **Info**
-> prueba
+> [!info]+
+>prueba
 
 También se pueden añadir títulos personalizados  a los bloques de citas añadiendo el título justo después del tipo de bloque.
 
-> **Esto es un título personalizado**
-> prueba
+> [!success] esto es un título personalizado
+>prueba
