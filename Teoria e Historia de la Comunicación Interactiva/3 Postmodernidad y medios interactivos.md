@@ -12,7 +12,7 @@ Más que simples etapas cronológicas, la Modernidad y la Postmodernidad se defi
 # La Sociedad Postindustrial (Daniel Bell, 1973)
 Formulada por el sociólogo **Daniel Bell**, describe cómo a partir de los años 50 las economías más desarrolladas dejaron de depender prioritariamente de la industria pesada.
 
-> [!IMPORTANT] Datillo
+> **Datillo**
 > - Los trabajadores de «cuello blanco» (ligados a los servicios, la información y el conocimiento) superan ampliamente a los operarios de «cuello azul».
 > - Como reflejo de esta estructura, el sector servicios (terciario) pasa a concentrar el **65 %** de la actividad económica, frente al **30 %** del secundario y el **4,6 %** del primario.
 
