@@ -9,3 +9,5 @@
 Creado bajo el paraguas del Departamento de Defensa de EE. UU. e impulsado por universidades y centros de investigacion (UCLA, Standford, UC Santa Barbara, Utah), ARPANET nacio en 1969 como una red experimental. Su caracteristica clave era no tener un nodo centralizado: si un enlace fallaba, los datos buscaban rutas alternativas.
 ### La Conmutacion de paquetes 
 Basada en los principios desarrollados por Paul Baran y Donald Davies, la informacion no ocupa 
+# Los precursores visionarios: del Memex al Hipertexto
+Vannevar Bush y *"As We May Think"* (1945)
