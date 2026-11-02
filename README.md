@@ -382,23 +382,3 @@ git push -u origin notas/mi-cambio
 ```
 Después, abre <https://github.com/Challsss/Vault> en el navegador y crea el *Pull Request* desde `notas/mi-cambio` hacia `main`.
 </details>
-
-<details>
-<summary>⚙️ <b>Configuración de seguridad en GitHub (Para el Responsable)</b></summary>
-<br>
-
-Para garantizar técnicamente que nadie suba cambios por error a `main`, el propietario del repositorio (**Carles Aguilar**) puede aplicar estas reglas en GitHub:
-
-1. Abre el repositorio en GitHub y ve a **Settings > Rules > Rulesets** *(o **Settings > Branches** en la interfaz clásica)*.
-2. Crea un nuevo conjunto de reglas apuntando a la rama **`main`**.
-3. Activa las siguientes protecciones:
-   - ✅ **Restrict deletions** (Bloquear el borrado de `main`).
-   - ✅ **Block force pushes** (Bloquear subidas forzadas).
-   - ✅ **Require a pull request before merging**:
-     - Exigir al menos **1 aprobación** (*Required approvals: 1*).
-     - Exigir aprobación del propietario (*Require review from Code Owners* / responsable).
-     - Descartar aprobaciones antiguas si se suben nuevos commits (*Dismiss stale pull request approvals when new commits are pushed*).
-     - Exigir que todos los hilos de comentarios estén resueltos (*Require conversation resolution before merging*).
-4. Desactiva la opción de que los colaboradores puedan aprobar sus propios Pull Requests.
-5. Guarda los cambios y verifica el comportamiento con una cuenta de colaborador.
-</details>
