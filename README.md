@@ -1,365 +1,404 @@
-# Guía para colaborar en Vault
+<div align="center">
 
-Este repositorio contiene el **Vault** compartido. Se administra con Git y está alojado en GitHub para que varias personas puedan trabajar sin sobrescribir accidentalmente el trabajo de los demás.
+# 📓 Guía de Colaboración — Vault
 
-Esta guía está escrita para personas que nunca han utilizado GitHub. Explica:
+**Bienvenido/a al repositorio compartido del Vault.**  
+Esta guía está pensada **desde cero** para personas que nunca han usado Git ni GitHub.
 
-- cómo crear una cuenta de GitHub;
-- cómo instalar las herramientas necesarias en Windows o macOS;
-- cómo descargar (clonar) este repositorio;
-- cómo editar el Vault;
-- cómo enviar los cambios para su revisión;
-- cómo funciona el proceso de revisión y aprobación
-- cómo resolver los problemas más habituales.
+[![Repositorio](https://img.shields.io/badge/GitHub-Challsss%2FVault-181717?style=for-the-badge&logo=github)](https://github.com/Challsss/Vault)
+[![Obsidian](https://img.shields.io/badge/Editor-Obsidian-7C3AED?style=for-the-badge&logo=obsidian)](https://obsidian.md/download)
+[![GitHub Desktop](https://img.shields.io/badge/App-GitHub_Desktop-2DBA4E?style=for-the-badge&logo=github)](https://desktop.github.com/)
 
-Dirección del repositorio: <https://github.com/Challsss/Vault>
+</div>
 
-## 1. Palabras importantes
+---
 
-- **Git**: programa que registra los cambios realizados en los archivos.
-- **GitHub**: página web donde se guarda este repositorio y se revisan los cambios.
-- **Repositorio (repo)**: carpeta administrada por Git. Este repositorio es `Challsss/Vault`.
-- **Clonar**: descargar una copia completa del repositorio en el ordenador.
-- **Copia local**: la copia del repositorio que está en el ordenador.
-- **Remoto**: la copia alojada en GitHub. En esta guía se llama `origin`.
-- **Rama (branch)**: una línea de trabajo independiente. La versión compartida y aprobada está en la rama `main`.
-- **Commit**: punto de guardado que contiene uno o varios cambios relacionados.
-- **Push**: subir los commits locales a GitHub.
-- **Pull**: descargar cambios de GitHub al ordenador.
-- **Pull request (PR)**: solicitud para que el responsable revise y fusione una rama con `main`.
-- **Fusionar (merge)**: combinar una rama aprobada con `main`.
-- **Responsable (maintainer)**: persona encargada de revisar y aprobar los cambios. En este repositorio es el propietario, **Carles Aguilar**.
-- **Conflicto**: situación en la que dos personas han cambiado la misma parte de un archivo y Git no puede decidir qué versión conservar.
+## 🧭 Índice Rápido
 
-El flujo básico es:
+1. [¿Qué es esto y cómo funciona?](#-1-qué-es-esto-y-cómo-funciona)
+2. [Diccionario de Supervivencia](#-2-diccionario-de-supervivencia)
+3. [Las Reglas de Oro](#-3-las-reglas-de-oro)
+4. [FASE 1: Configuración Inicial (Solo el primer día)](#-fase-1-configuración-inicial-solo-el-primer-día)
+   - [Paso 1: Crear tu cuenta de GitHub](#paso-1-crear-tu-cuenta-de-github)
+   - [Paso 2: Instalar los programas necesarios](#paso-2-instalar-los-programas-necesarios)
+   - [Paso 3: Descargar (clonar) el Vault y abrirlo en Obsidian](#paso-3-descargar-clonar-el-vault-y-abrirlo-en-obsidian)
+5. [FASE 2: Cómo trabajar en el día a día](#-fase-2-cómo-trabajar-en-el-día-a-día)
+   - [1. Preparar tu zona de trabajo (Rama)](#1-preparar-tu-zona-de-trabajo-crear-una-rama)
+   - [2. Editar tus notas en Obsidian](#2-editar-tus-notas-en-obsidian)
+   - [3. Guardar y subir tus cambios (Commit y Push)](#3-guardar-y-subir-tus-cambios-commit-y-push)
+   - [4. Enviar para revisión (Pull Request)](#4-enviar-para-revisión-pull-request)
+   - [5. Revisión, correcciones y siguiente tarea](#5-revisión-correcciones-y-siguiente-tarea)
+6. [Checklist Rápida](#-6-checklist-rápida)
+7. [Solución de Problemas Habituales (FAQ)](#-7-solución-de-problemas-habituales-faq)
+8. [Avanzado: Línea de comandos y Configuración del Responsable](#-8-avanzado-y-administración)
 
-```text
-clonar -> crear una rama -> editar -> hacer commit -> hacer push -> abrir un pull request -> el responsable revisa -> corregir si es necesario -> el responsable fusiona
+---
+
+## 💡 1. ¿Qué es esto y cómo funciona?
+
+Este proyecto contiene nuestro **Vault** compartido de notas. Para que varias personas podamos escribir, corregir y ampliar apuntes al mismo tiempo **sin borrar accidentalmente el trabajo de los demás**, utilizamos **Git** y **GitHub**.
+
+Piensa en ello como un documento compartido con **borradores privados**:
+1. Descargas la versión oficial a tu ordenador.
+2. Creas un "borrador aparte" (llamado **rama**) para hacer tus cambios con tranquilidad.
+3. Cuando terminas, pides que tus cambios se unan a la versión oficial (mediante un **Pull Request**).
+4. El responsable (**Carles Aguilar**) revisa que todo esté bien y lo aprueba.
+
+```mermaid
+flowchart LR
+    A["1. Clonar\n(Descargar)"] --> B["2. Crear Rama\n(Tu borrador)"]
+    B --> C["3. Editar\n(En Obsidian)"]
+    C --> D["4. Commit y Push\n(Guardar y subir)"]
+    D --> E["5. Pull Request\n(Pedir revisión)"]
+    E --> F{"6. Revisión de\nCarles Aguilar"}
+    F -- "Pide ajustes" --> C
+    F -- "¡Aprobado!" --> G["7. Merge a main\n(Publicado)"]
 ```
 
-## 2. Reglas de colaboración
+---
 
-Estas reglas se aplican a todas las contribuciones:
+## 📖 2. Diccionario de Supervivencia
 
-1. **No trabajes directamente en `main`.** Crea siempre una rama separada.
-2. **No hagas push directamente a `main`.** Los cambios llegan a `main` únicamente mediante un pull request aprobado.
-3. **El responsable es el filtro final.** Un pull request no termina hasta que Carles Aguilar lo aprueba y lo fusiona.
-4. **Usa una rama y un pull request por tarea.** No mezcles, por ejemplo, una corrección ortográfica con una reorganización grande.
-5. **No renombres, muevas o borres muchas notas sin explicar el motivo en el pull request.**
-6. **Antes de abrir un pull request, actualiza tu rama desde `main` y revisa tus cambios.**
-7. **Considera la versión de `main` en GitHub como la versión compartida aprobada.** No sobrescribas el trabajo de otra persona para resolver un conflicto sin revisarlo cuidadosamente.
+No necesitas aprender programación, solo familiarizarte con estas palabras que verás en los botones:
 
-El responsable puede aprobar un pull request, pedir cambios o rechazarlo. Esto es normal y forma parte del proceso de revisión.
+| Término | ¿Qué significa en lenguaje humano? |
+| :--- | :--- |
+| **Git** | El sistema que vigila e historiza todos los cambios en los archivos. |
+| **GitHub** | La página web (<https://github.com/Challsss/Vault>) donde se guarda el proyecto en la nube. |
+| **Repositorio (Repo)** | La carpeta del proyecto (`Challsss/Vault`). |
+| **Clonar (`Clone`)** | Descargar el repositorio completo a tu ordenador por primera vez. |
+| **Copia local / Remoto (`origin`)** | **Local** es la carpeta en tu ordenador; **Remoto (`origin`)** es la copia en la web de GitHub. |
+| **Rama (`Branch`)** | Una línea de trabajo paralela (tu borrador personal). La versión oficial aprobada se llama **`main`**. |
+| **Commit** | Un "punto de guardado" (como en un videojuego) con una nota que explica qué has hecho. |
+| **Push** | Subir tus puntos de guardado (*commits*) desde tu ordenador a GitHub. |
+| **Pull / Fetch** | Descargar a tu ordenador las novedades que otros compañeros hayan subido a GitHub. |
+| **Pull Request (PR)** | Avisar al responsable para que revise tu rama y la una a la versión oficial (`main`). |
+| **Fusionar (`Merge`)** | El momento en que el responsable une tus cambios aprobados con `main`. |
+| **Responsable (`Maintainer`)** | Quien revisa, aprueba y fusiona los cambios. En este repositorio es **Carles Aguilar**. |
+| **Conflicto** | Cuando dos personas modifican exactamente la misma línea de un archivo y hay que decidir qué conservar. |
 
-## 3. Crear una cuenta de GitHub
+---
 
-Necesitas una cuenta de GitHub para acceder al repositorio, crear ramas en GitHub y abrir pull requests.
+## 🛡️ 3. Las Reglas de Oro
 
-1. Abre <https://github.com/>.
-2. Pulsa **Sign up** (Registrarse).
-3. Introduce tu correo electrónico, crea una contraseña y elige un nombre de usuario.
-4. Confirma tu correo usando el mensaje que GitHub te enviará.
-5. Activa la autenticación en dos pasos si GitHub te lo solicita. Es muy recomendable.
-6. Envía tu nombre de usuario de GitHub a Carles Aguilar para que pueda invitarte como colaborador si el repositorio es privado.
-7. Abre el correo de invitación o revisa tus notificaciones de GitHub y acepta la invitación.
+> [!IMPORTANT]
+> **Regla #1: NUNCA trabajes ni subas cambios directamente en la rama `main`.**  
+> La rama `main` es sagrada: representa la versión oficial y revisada. Siempre debes crear una rama nueva antes de editar cualquier nota.
 
-Si el repositorio es público, quizá puedas clonarlo sin invitación. Aun así, necesitas permiso para subir ramas directamente a este repositorio.
+1. **Una tarea = Una rama = Un Pull Request:** No mezcles cosas distintas (por ejemplo, corregir faltas de ortografía en un tema y reorganizar carpetas enteras en el mismo envío).
+2. **El responsable es el filtro final:** Ningún trabajo está terminado hasta que **Carles Aguilar** revisa, aprueba y fusiona tu *Pull Request*. Que te pidan algún cambio o corrección es totalmente normal.
+3. **Cuidado al mover o borrar:** No renombres, muevas ni elimines muchas notas de golpe sin explicarlo claramente en tu *Pull Request*.
+4. **Actualiza antes de empezar y antes de enviar:** Asegúrate siempre de partir de la versión más reciente de `main`.
+5. **Respeto ante conflictos:** Si surge un conflicto con el trabajo de otra persona, **no sobrescribas su parte a ciegas**. Revísalo con calma o pide ayuda al responsable.
 
-## 4. Instalar las herramientas recomendadas
+---
 
-### Windows
+# 🚀 FASE 1: Configuración Inicial (Solo el primer día)
 
-La opción más sencilla para principiantes es **GitHub Desktop**:
+Estos pasos solo tendrás que hacerlos **una vez** para dejar tu ordenador listo.
 
-1. Descárgalo desde <https://desktop.github.com/>.
-2. Ejecuta el instalador.
-3. Abre GitHub Desktop.
-4. Elige **Sign in to GitHub.com** e inicia sesión con tu cuenta.
-5. Si GitHub Desktop solicita tu nombre y correo, utiliza los asociados a tu cuenta de GitHub.
+### Paso 1: Crear tu cuenta de GitHub
 
-También necesitas un editor para las notas. Si este es un Vault de Obsidian:
+Si todavía no tienes cuenta en GitHub, créala así (tardarás 2 minutos):
 
-1. Descarga Obsidian desde <https://obsidian.md/download>.
-2. Instálalo y ábrelo.
+1. Entra en 👉 **[github.com](https://github.com/)** y pulsa el botón <kbd>Sign up</kbd> (Registrarse).
+2. Introduce tu **correo electrónico**, crea una **contraseña** y elige un **nombre de usuario**.
+3. Abre tu correo y confirma la cuenta con el código o enlace que te enviará GitHub.
+4. *(Muy recomendable)* Activa la verificación en dos pasos (2FA) si GitHub te lo sugiere.
+5. **¡Importante!** Envía tu **nombre de usuario de GitHub** a **Carles Aguilar** para que te dé permisos de colaborador.
+6. Revisa tu correo o tus notificaciones de GitHub y **acepta la invitación** al repositorio.
 
-GitHub Desktop instala las herramientas de línea de comandos opcionales. Puedes usar **PowerShell** desde el menú Inicio si prefieres escribir comandos.
+> [!NOTE]
+> Aunque el repositorio sea público y puedas verlo, **necesitas haber aceptado la invitación** para poder subir tus ramas de trabajo.
 
-### macOS
+---
 
-La opción más sencilla también es **GitHub Desktop**:
+### Paso 2: Instalar los programas necesarios
 
-1. Descárgalo desde <https://desktop.github.com/>.
-2. Abre el archivo descargado.
-3. Arrastra GitHub Desktop a la carpeta **Applications** (Aplicaciones).
-4. Abre GitHub Desktop y elige **Sign in to GitHub.com**.
-5. Si macOS pregunta si quieres abrir la aplicación, confirma.
+Para no tener que escribir comandos complicados, usaremos **GitHub Desktop** (para gestionar las versiones con botones visuales) y **Obsidian** (para escribir y leer las notas).
 
-Para editar un Vault de Obsidian:
+Selecciona tu sistema operativo para ver los pasos:
 
-1. Descarga Obsidian desde <https://obsidian.md/download>.
-2. Abre el archivo `.dmg` descargado.
-3. Arrastra Obsidian a **Applications**.
-4. Abre Obsidian.
+<details open>
+<summary><b>🪟 Instrucciones para Windows</b> (Haz clic para desplegar/ocultar)</summary>
+<br>
 
-También puedes usar **Terminal**. Ábrela pulsando `Command + Space`, escribiendo `Terminal` y pulsando `Return`.
+**A. Instalar GitHub Desktop:**
+1. Descárgalo gratis desde **[desktop.github.com](https://desktop.github.com/)**.
+2. Ejecuta el instalador descargado.
+3. Cuando se abra, pulsa <kbd>Sign in to GitHub.com</kbd> e inicia sesión con la cuenta que creaste en el Paso 1.
+4. Si te pregunta tu nombre y correo (*Configure Git*), asegúrate de que sean los mismos de tu cuenta de GitHub.
 
-## 5. Clonar el repositorio con GitHub Desktop
+**B. Instalar Obsidian:**
+1. Descárgalo desde **[obsidian.md/download](https://obsidian.md/download)**.
+2. Ejecuta el instalador y ábrelo.
 
-GitHub Desktop es la opción recomendada porque evita la mayoría de los errores de la línea de comandos y funciona de forma parecida en Windows y macOS.
+</details>
 
-1. Abre GitHub Desktop.
-2. Selecciona **File > Clone repository** (Archivo > Clonar repositorio).
+<details>
+<summary><b>🍎 Instrucciones para macOS (Mac)</b> (Haz clic para desplegar/ocultar)</summary>
+<br>
+
+**A. Instalar GitHub Desktop:**
+1. Descárgalo gratis desde **[desktop.github.com](https://desktop.github.com/)**.
+2. Abre el archivo descargado y arrastra el icono de **GitHub Desktop** a tu carpeta **Applications** (Aplicaciones).
+3. Ábrelo (confirma si macOS te pregunta si confías en la aplicación) y pulsa <kbd>Sign in to GitHub.com</kbd>.
+
+**B. Instalar Obsidian:**
+1. Descárgalo desde **[obsidian.md/download](https://obsidian.md/download)**.
+2. Abre el archivo `.dmg` y arrastra **Obsidian** a la carpeta **Applications**.
+3. Abre Obsidian.
+
+</details>
+
+---
+
+### Paso 3: Descargar (clonar) el Vault y abrirlo en Obsidian
+
+Ahora vamos a traer la carpeta del proyecto desde internet hasta tu ordenador:
+
+1. Abre **GitHub Desktop**.
+2. En el menú superior, ve a <kbd>File</kbd> ➔ <kbd>Clone repository...</kbd> *(Archivo > Clonar repositorio)*.
 3. Selecciona la pestaña **GitHub.com**.
-4. Busca `Challsss/Vault`.
-5. Selecciona el repositorio.
-6. En **Local path** (Ruta local), elige dónde quieres guardar la carpeta.
-   - Elige un lugar que puedas encontrar fácilmente.
-   - No la pongas dentro de otro repositorio Git.
-   - No muevas ni cambies el nombre de la carpeta después de clonarla, salvo que sepas actualizar la ruta en GitHub Desktop.
-7. Pulsa **Clone** (Clonar).
-8. Espera a que termine la descarga.
+4. Busca y selecciona **`Challsss/Vault`**.
+5. En **Local path** *(Ruta local)*, elige en qué carpeta de tu ordenador quieres guardarlo:
+   - ✅ Elige un sitio fácil de recordar (por ejemplo, en `Documentos`).
+   - ❌ **No** lo metas dentro de otro repositorio de Git.
+   - ❌ **No** cambies el nombre ni muevas esta carpeta de sitio más adelante.
+6. Pulsa <kbd>Clone</kbd> y espera unos segundos a que termine de descargar.
 
-El repositorio ya está en tu ordenador. GitHub Desktop debería mostrar el nombre del repositorio y la rama actual, `main`.
+#### Vincular con Obsidian:
+1. Abre **Obsidian**.
+2. Donde dice **Open folder as vault** *(Abrir carpeta como bóveda)*, pulsa <kbd>Open</kbd>.
+3. Busca y selecciona **exactamente la carpeta `Vault`** que acaba de descargar GitHub Desktop.
 
-### Abrir el Vault en Obsidian
+> [!WARNING]
+> Edita siempre los archivos dentro de esta carpeta. Si haces copias de la carpeta en el Escritorio o en otro sitio y editas esas copias, GitHub Desktop no se enterará de tus cambios.
 
-1. Abre Obsidian.
-2. Elige **Open folder as vault** (Abrir carpeta como Vault).
-3. Selecciona la carpeta donde GitHub Desktop clonó `Vault`.
-4. Confirma que es el Vault que quieres abrir.
-5. Asegúrate de editar los archivos dentro de esta carpeta. Si editas otra copia, los cambios no pertenecerán al repositorio.
+---
 
-## 6. Empezar a trabajar de forma segura
+# 🔄 FASE 2: Cómo trabajar en el día a día
 
-Antes de cambiar algo, asegúrate de que tu copia local de `main` está actualizada:
+Cada vez que vayas a añadir o modificar apuntes, sigue estos **5 pasos en orden**:
 
-1. Abre GitHub Desktop.
-2. Selecciona el repositorio `Vault`.
-3. Pulsa **Fetch origin** (Comprobar cambios).
-4. Si GitHub Desktop indica que hay actualizaciones, pulsa **Pull origin** (Descargar cambios).
-5. Selecciona **Current Branch > New Branch** (Rama actual > Nueva rama).
-6. Escribe un nombre descriptivo, como `notes/medios-interactivos`.
-7. Pulsa **Create Branch** (Crear rama).
-8. Pulsa **Publish branch** (Publicar rama) para guardar la rama en GitHub.
+### 1. Preparar tu zona de trabajo (Crear una rama)
 
-Ahora trabajas en tu propia rama. Tus cambios no modificarán `main` hasta que el responsable apruebe un pull request.
+Antes de tocar ninguna nota en Obsidian, abre **GitHub Desktop**:
 
-## 7. Hacer y guardar cambios
+1. Comprueba que arriba a la izquierda en *Current Repository* pone **`Vault`**.
+2. Comprueba que en *Current Branch* pone **`main`**.
+3. Pulsa el botón superior <kbd>Fetch origin</kbd> (y si cambia a <kbd>Pull origin</kbd>, púlsalo también). *Esto descarga los últimos cambios de tus compañeros.*
+4. Pulsa en **Current Branch** ➔ botón <kbd>New Branch</kbd> *(Nueva rama)*.
+5. Ponle un nombre corto y descriptivo sin espacios, por ejemplo: `notas/medios-interactivos` o `correccion/tema-2`.
+6. Pulsa <kbd>Create Branch</kbd> y luego <kbd>Publish branch</kbd> para que se registre en GitHub.
 
-Edita las notas con Obsidian u otro editor adecuado:
+> [!TIP]
+> ¡Listo! Ahora estás en tu propia "burbuja" segura. Nada de lo que hagas romperá la versión principal.
 
-- Guarda los archivos normalmente.
-- Conserva los enlaces y el formato Markdown existentes salvo que tu tarea requiera cambiarlos.
-- Evita editar la misma nota que otra persona al mismo tiempo.
-- No edites la carpeta `.git`; contiene información interna de Git.
-- No borres archivos de `.obsidian` salvo que el responsable lo pida expresamente.
-- Comprueba el resultado en Obsidian antes de enviarlo.
+---
 
-### Revisar los cambios en GitHub Desktop
+### 2. Editar tus notas en Obsidian
 
-1. Vuelve a GitHub Desktop.
-2. Abre la pestaña **Changes** (Cambios).
-3. Revisa la lista de archivos modificados.
-4. Selecciona un archivo para ver las líneas añadidas y eliminadas.
-5. Si un cambio fue accidental, utiliza el menú contextual del archivo para restaurarlo. Ten cuidado: restaurar un archivo elimina sus cambios no guardados en un commit.
+Ve a **Obsidian** y trabaja con normalidad:
 
-## 8. Hacer commit y publicar el trabajo
+- ✅ Guarda tus archivos normalmente (`Ctrl + S` / `Cmd + S`).
+- ✅ Respeta el formato Markdown y los enlaces existentes a menos que tu tarea sea modificarlos.
+- ✅ Revisa cómo se ve tu nota en Obsidian antes de darla por terminada.
+- ❌ **Prohibido tocar** la carpeta oculta `.git` (contiene el motor interno de Git).
+- ❌ **No borres ni edites** archivos dentro de `.obsidian` salvo que Carles Aguilar te lo pida expresamente.
+- 💬 Intenta coordinarte para no editar exactamente la misma nota que otro compañero al mismo tiempo.
 
-Un commit es un punto de guardado en tu rama.
+---
 
-1. En GitHub Desktop, permanece en la pestaña **Changes**.
-2. En el campo de resumen, escribe una descripción breve, como `Añadir resumen de la historia web`.
-3. Puedes añadir más detalles en el campo de descripción.
-4. Pulsa **Commit to _nombre-de-tu-rama_**.
-5. Pulsa **Push origin** para subir la rama a GitHub.
+### 3. Guardar y subir tus cambios (Commit y Push)
 
-Haz commits con frecuencia, especialmente al terminar una parte pequeña y lógica de la tarea. Los commits facilitan revisar el trabajo y recuperar errores. No uses mensajes como `cosas`, `cambios` o `final`; no explican qué ocurrió.
+Cuando hayas terminado una parte lógica de tu trabajo, vuelve a **GitHub Desktop**:
 
-## 9. Abrir un pull request
+1. Mira la columna de la izquierda (pestaña **Changes**): verás la lista de archivos que has modificado.
+   - *Si haces clic en un archivo, verás a la derecha en verde lo que has añadido y en rojo lo que has borrado.*
+   - *Si modificaste un archivo sin querer, haz clic derecho sobre él y elige **Discard changes...** para dejarlo como estaba.*
+2. Abajo a la izquierda, verás un cuadro de texto llamado **Summary (required)**:
+   - Escribe una frase clara de lo que has hecho.
+   - ✅ **Bien:** `Añadir resumen de historia de la web`
+   - ❌ **Mal:** `cambios`, `cosas`, `final`, `asdf`
+3. *(Opcional)* En el cuadro **Description** puedes añadir más detalles si hace falta.
+4. Pulsa el botón azul <kbd>Commit to <i>nombre-de-tu-rama</i></kbd>.
+5. Por último, pulsa arriba a la derecha <kbd>Push origin</kbd> para subir ese guardado a la nube de GitHub.
 
-Después de publicar tu rama:
+> [!TIP]
+> Puedes hacer varios *Commits* y *Push* mientras trabajas en tu rama (por ejemplo, uno al terminar cada apartado). ¡Guardar a menudo es buena práctica!
 
-1. En GitHub Desktop, pulsa **Create Pull Request**. Si no aparece, abre <https://github.com/Challsss/Vault> en el navegador y elige **Pull requests > New pull request**.
-2. En el repositorio base, selecciona `Challsss/Vault`.
-3. En la rama base, selecciona `main`.
-4. En la rama de comparación, selecciona tu rama.
-5. Pulsa **Create pull request**.
-6. Escribe un título útil, como `Añadir notas sobre medios interactivos`.
-7. En la descripción explica:
-   - qué cambiaste;
-   - por qué lo cambiaste;
-   - qué archivos o secciones afecta;
-   - cómo comprobaste el resultado; y
-   - qué debe revisar especialmente el responsable.
-8. Pulsa **Create pull request**.
-9. Si GitHub ofrece la opción, solicita la revisión de Challsss.
+---
 
-Mantén abierto el pull request mientras se revisa. Si haces más commits en la misma rama, GitHub los añadirá automáticamente al pull request.
+### 4. Enviar para revisión (Pull Request)
 
-## 10. Responder a los comentarios de revisión
+Cuando tu tarea esté lista para que **Carles Aguilar** la revise:
 
-El responsable puede aprobar el pull request, hacer preguntas o pedir cambios:
+1. En **GitHub Desktop**, pulsa el botón <kbd>Create Pull Request</kbd> (o <kbd>Preview Pull Request</kbd> ➔ <kbd>Create Pull Request</kbd>).  
+   *(También puedes ir directamente a [github.com/Challsss/Vault](https://github.com/Challsss/Vault) en tu navegador y pulsar **Pull requests > New pull request**).*
+2. Se abrirá tu navegador web en GitHub. Comprueba las flechas superiores:
+   - **base:** `main` ⬅️ **compare:** `tu-rama`
+3. Pon un **título claro** (ej. *Añadir apuntes sobre medios interactivos*).
+4. En la **descripción**, explica brevemente:
+   - 📝 **Qué** has cambiado y **por qué**.
+   - 📂 **Qué archivos o secciones** se ven afectados.
+   - 🔍 **Cómo** has comprobado en Obsidian que todo se ve bien.
+   - 👀 Si hay algo en concreto que el responsable deba mirar con especial atención.
+5. En la columna derecha, si te aparece la sección **Reviewers**, selecciona a **`Challsss`**.
+6. Pulsa el botón verde <kbd>Create pull request</kbd>.
 
-1. Lee cada comentario cuidadosamente.
-2. Haz los cambios solicitados en la misma rama local.
-3. Haz un commit con un mensaje claro.
-4. Vuelve a publicar la rama.
-5. Responde al comentario cuando hayas completado la petición.
-6. No cierres el pull request solo porque te hayan pedido cambios.
+---
 
-Cuando el responsable apruebe y fusione el pull request, el trabajo formará parte de `main`. Después puedes borrar la rama antigua cuando GitHub Desktop o GitHub lo ofrezca.
+### 5. Revisión, correcciones y siguiente tarea
 
-## 11. Empezar la siguiente tarea
+Una vez abierto el Pull Request, **Carles Aguilar** lo revisará:
 
-Después de que se fusione un pull request:
+* **Si te deja comentarios o te pide algún ajuste:**
+  1. **No cierres el Pull Request ni crees uno nuevo.**
+  2. Lee atentamente cada comentario.
+  3. Abre Obsidian (asegurándote de seguir en la misma rama), haz las correcciones y guarda.
+  4. Ve a GitHub Desktop, haz un nuevo **Commit** explicando el arreglo y pulsa **Push origin**.
+  5. ¡El Pull Request se actualizará solo! Responde al comentario en la web de GitHub avisando de que ya está corregido.
 
-1. En GitHub Desktop, cambia a `main` desde **Current Branch**.
-2. Pulsa **Fetch origin**.
-3. Pulsa **Pull origin**.
-4. Crea una rama nueva para la siguiente tarea.
+* **Cuando el responsable lo apruebe y lo fusione (Merge):**
+  1. ¡Enhorabuena! Tus apuntes ya forman parte oficial de `main`.
+  2. Para tu **siguiente tarea**, abre GitHub Desktop:
+     - Cambia en *Current Branch* a **`main`**.
+     - Pulsa <kbd>Fetch origin</kbd> y luego <kbd>Pull origin</kbd> para descargar todo lo nuevo.
+     - Crea una **rama nueva** desde cero (nunca reutilices una rama que ya fue fusionada).
 
-Siempre crea la rama desde el `main` más reciente. No continúes usando una rama antigua después de que se haya fusionado.
+---
 
-## 12. Instrucciones con la línea de comandos (opcional)
+## ✅ 6. Checklist Rápida
 
-Los pasos gráficos anteriores son los recomendados. Estos comandos son una alternativa para quienes se sientan cómodos usando una terminal.
+Usa esta lista para no olvidarte de ningún paso:
 
-### Windows PowerShell
+| 🏁 Antes de empezar a escribir | 📤 Antes de abrir el Pull Request | 🔄 Al terminar (cuando te aprueben) |
+| :--- | :--- | :--- |
+| <ul><li>[ ] Estoy en la rama `main`.</li><li>[ ] He pulsado **Fetch / Pull origin**.</li><li>[ ] He creado una **rama nueva** para mi tarea.</li><li>[ ] He pulsado **Publish branch**.</li></ul> | <ul><li>[ ] He revisado cómo se ve en Obsidian.</li><li>[ ] He revisado la lista de archivos en GitHub Desktop.</li><li>[ ] He hecho **Commit** con un título descriptivo.</li><li>[ ] He pulsado **Push origin**.</li><li>[ ] He explicado qué cambié en la descripción del PR.</li></ul> | <ul><li>[ ] El responsable ha fusionado el PR.</li><li>[ ] He vuelto a la rama `main`.</li><li>[ ] He hecho **Fetch / Pull origin**.</li><li>[ ] Crearé una rama nueva para la próxima tarea.</li></ul> |
 
-Abre PowerShell y ejecuta:
+---
 
-```powershell
-git clone https://github.com/Challsss/Vault.git
-cd Vault
-git switch -c notes/mi-cambio
+## 🛟 7. Solución de Problemas Habituales (FAQ)
+
+Haz clic en tu problema para ver cómo resolverlo sin perder nada:
+
+<details>
+<summary>❓ <b>"He editado notas en Obsidian, pero en GitHub Desktop no aparece ningún cambio"</b></summary>
+<br>
+
+Comprueba estas cuatro cosas:
+1. Que en Obsidian hayas guardado el archivo (`Ctrl + S` o `Cmd + S`).
+2. Que en GitHub Desktop (arriba a la izquierda) esté seleccionado el repositorio **`Vault`**.
+3. Que estés editando **la misma carpeta** que clonó GitHub Desktop y no otra copia suelta en tu ordenador. *(Puedes hacer clic derecho sobre `Vault` en GitHub Desktop y elegir **Show in Explorer / Finder** para ver exactamente cuál es la carpeta buena).*
+</details>
+
+<details>
+<summary>❓ <b>"¡Socorro! He empezado a editar estando en la rama <code>main</code> (o en la rama equivocada)"</b></summary>
+<br>
+
+**No copies ni pegues archivos a mano a otro sitio.**
+- Si aún **no** has hecho *Commit*: ve a GitHub Desktop, pulsa en **Current Branch** ➔ **New Branch**. GitHub Desktop te preguntará qué hacer con tus cambios actuales; elige **Bring my changes to [nueva-rama]** *(Llevar mis cambios a la nueva rama)*.
+- Si tienes dudas o ya hiciste *Commit* sin querer, **no toques nada más y avisa a Carles Aguilar** para que te indique cómo moverlo en un minuto.
+</details>
+
+<details>
+<summary>❓ <b>"He borrado o estropeado un archivo por accidente"</b></summary>
+<br>
+
+- **Si todavía NO has hecho Commit:** Ve a la pestaña *Changes* en GitHub Desktop, haz clic derecho sobre el archivo afectado y selecciona **Discard changes...** *(Descartar cambios)*. El archivo volverá mágicamente a su estado original.
+- **Si YA hiciste Commit:** ¡Tranquilo/a! En Git nunca se pierde nada de verdad. No intentes borrar el historial; simplemente escribe a Carles Aguilar diciéndole qué archivo se vio afectado y en qué commit ocurrió.
+</details>
+
+<details>
+<summary>❓ <b>"Me da un error al pulsar <code>Push origin</code>"</b></summary>
+<br>
+
+1. Pulsa primero <kbd>Fetch origin</kbd>.
+2. Comprueba que has iniciado sesión en GitHub Desktop con la cuenta correcta y que aceptaste la invitación al repositorio.
+3. **Nunca** hagas un `Force push` (forzar subida) a menos que el responsable te lo pida expresamente.
+</details>
+
+<details>
+<summary>❓ <b>"Me sale un aviso de que hay CONFLICTOS (Conflicts)"</b></summary>
+<br>
+
+Un conflicto ocurre cuando otra persona y tú habéis modificado exactamente las mismas líneas del mismo archivo.
+> [!CAUTION]
+> No elijas a ciegas "usar mi versión (*ours*)" o "usar la suya (*theirs*)", porque podrías borrar el trabajo de tu compañero.
+
+1. Abre el archivo en conflicto con un editor de texto.
+2. Verás unas marcas especiales que pone Git:
+   ```text
+   <<<<<<< HEAD
+   Texto que estaba en una rama
+   =======
+   Texto que estaba en la otra rama
+   >>>>>>> main
+   ```
+3. Lee ambas partes, deja el texto combinado o correcto y **borra las líneas de marcas (`<<<<<<<`, `=======`, `>>>>>>>`)**.
+4. Guarda el archivo, vuelve a GitHub Desktop, haz *Commit* y *Push*.
+5. **Si no tienes claro qué conservar, pregúntale antes al responsable.**
+</details>
+
+<details>
+<summary>❓ <b>"Obsidian me muestra dos Vaults o archivos duplicados"</b></summary>
+<br>
+
+Cierra el Vault duplicado desde el selector de bóvedas de Obsidian y asegúrate de abrir únicamente la carpeta que descargó GitHub Desktop. Solo deberías tener una copia de esta carpeta en tu ordenador.
+</details>
+
+---
+
+## 🛠️ 8. Avanzado y Administración
+
+Estas secciones son opcionales y están dirigidas a usuarios con experiencia en terminal o al administrador del repositorio.
+
+<details>
+<summary>💻 <b>Uso mediante Línea de Comandos (Terminal / PowerShell)</b></summary>
+<br>
+
+Si prefieres usar la terminal en lugar de GitHub Desktop, estos son los comandos equivalentes tanto en **Windows PowerShell** como en la **Terminal de macOS**:
+
+**1. Configurar tu identidad (solo la primera vez):**
+```bash
+git config --global user.name "Tu Nombre"
+git config --global user.email "tu-correo-de-github@ejemplo.com"
 ```
 
-Después de editar los archivos:
-
-```powershell
-git status
-git add .
-git commit -m "Describe el cambio"
-git push -u origin notes/mi-cambio
-```
-
-Después abre el repositorio en GitHub y crea un pull request desde `notes/mi-cambio` hacia `main`.
-
-### Terminal de macOS
-
-Abre Terminal y ejecuta:
-
+**2. Clonar y crear una rama de trabajo:**
 ```bash
 git clone https://github.com/Challsss/Vault.git
 cd Vault
-git switch -c notes/mi-cambio
+git switch -c notas/mi-cambio
 ```
 
-Después de editar los archivos:
-
+**3. Guardar cambios y subirlos a GitHub:**
 ```bash
 git status
 git add .
-git commit -m "Describe el cambio"
-git push -u origin notes/mi-cambio
+git commit -m "Descripción clara del cambio"
+git push -u origin notas/mi-cambio
 ```
+Después, abre <https://github.com/Challsss/Vault> en el navegador y crea el *Pull Request* desde `notas/mi-cambio` hacia `main`.
+</details>
 
-Después abre el repositorio en GitHub y crea un pull request desde `notes/mi-cambio` hacia `main`.
+<details>
+<summary>⚙️ <b>Configuración de seguridad en GitHub (Para el Responsable)</b></summary>
+<br>
 
-Si Git solicita tu identidad la primera vez, configúrala con el nombre y correo que utilizas en GitHub:
+Para garantizar técnicamente que nadie suba cambios por error a `main`, el propietario del repositorio (**Carles Aguilar**) puede aplicar estas reglas en GitHub:
 
-```bash
-git config --global user.name "Tu nombre"
-git config --global user.email "tu-correo@example.com"
-```
-
-No utilices el correo de otra persona. Si GitHub solicita una contraseña al usar HTTPS, utiliza el inicio de sesión o el aviso de credenciales de GitHub; la contraseña normal de tu cuenta no siempre es aceptada por Git.
-
-## 13. Problemas habituales
-
-### “He cambiado archivos, pero GitHub Desktop no muestra nada”
-
-Comprueba que:
-
-- editaste la carpeta clonada por GitHub Desktop;
-- GitHub Desktop tiene seleccionado el repositorio `Vault`;
-- el archivo está guardado; y
-- el archivo no está fuera de la carpeta del repositorio.
-
-### “Estoy en la rama equivocada”
-
-En GitHub Desktop usa **Current Branch** para seleccionar la rama correcta. No copies archivos entre ramas para solucionar esto. Si tienes cambios sin commit, pide ayuda al responsable antes de cambiar de rama o descartarlos.
-
-### “Ha fallado Push origin”
-
-Primero pulsa **Fetch origin**. Si la rama ya existe en GitHub, comprueba que has iniciado sesión con la cuenta correcta y que tienes permiso para publicar en el repositorio. No hagas `force push` salvo que el responsable te lo indique expresamente.
-
-### “Hay conflictos”
-
-Un conflicto significa que otro cambio y el tuyo afectan a las mismas líneas o al mismo archivo. No elijas automáticamente “ours” o “theirs”.
-
-1. Detente y lee el archivo en conflicto.
-2. Compara tu trabajo con la versión de `main`.
-3. Conserva el contenido correcto o combina ambas modificaciones cuidadosamente.
-4. Elimina las marcas de conflicto de Git: `<<<<<<<`, `=======` y `>>>>>>>`.
-5. Guarda el archivo.
-6. Pide ayuda al responsable si no está claro cuál es el resultado correcto.
-7. Haz commit de la resolución y publica la rama.
-
-### “He hecho un commit por error”
-
-No borres ni reescribas el historial compartido. Si el commit todavía no se ha publicado, pide ayuda al responsable antes de modificarlo. Si ya se publicó o está en un pull request, haz un nuevo commit que corrija el problema y explica lo ocurrido.
-
-### “He borrado o cambiado un archivo por accidente”
-
-Si el cambio no tiene commit, usa el menú contextual del archivo en GitHub Desktop y elige restaurarlo. Si ya tiene commit, no te preocupes: informa al responsable de qué archivo se afectó y qué ocurrió.
-
-### “Obsidian muestra un Vault duplicado o inesperado”
-
-Cierra el Vault duplicado y vuelve a abrir exactamente la carpeta clonada por GitHub Desktop. Debería existir una sola copia de trabajo de este repositorio en el ordenador, salvo que haya un motivo específico para tener más de una.
-
-## 14. Recomendaciones de configuración para el responsable
-
-Para aplicar el flujo descrito, el propietario del repositorio debería configurar GitHub:
-
-1. Abre el repositorio en GitHub.
-2. Ve a **Settings > Rules > Rulesets** (o a **Settings > Branches** si aparece la interfaz antigua).
-3. Crea una regla o conjunto de reglas dirigido a la rama `main`.
-4. Exige un pull request antes de fusionar.
-5. Exige al menos una aprobación.
-6. Exige la aprobación del propietario o del responsable designado cuando esa opción esté disponible.
-7. Si corresponde, descarta las aprobaciones anteriores cuando se publiquen nuevos commits.
-8. Exige resolver todas las conversaciones antes de fusionar.
-9. Bloquea los force pushes y el borrado de la rama `main`.
-10. Restringe quién puede publicar en `main`, o desactiva completamente las publicaciones directas.
-11. Decide si los colaboradores pueden aprobar sus propios pull requests; se recomienda desactivar la autoaprobación.
-12. Guarda las reglas y pruébalas con una cuenta que no sea la del propietario.
-
-Los nombres y la ubicación de las opciones de GitHub pueden cambiar. Consulta la documentación actual de GitHub si alguna opción no aparece.
-
-## 15. Lista rápida de comprobación
-
-Antes de empezar:
-
-- [ ] Tengo una cuenta de GitHub.
-- [ ] Acepté la invitación al repositorio, si recibí una.
-- [ ] Instalé GitHub Desktop y, si hace falta, Obsidian.
-- [ ] Cloné el repositorio.
-- [ ] Descargué el `main` más reciente.
-- [ ] Creé y publiqué una rama nueva.
-
-Antes de abrir un pull request:
-
-- [ ] Revisé todos los archivos modificados.
-- [ ] Comprobé las notas en Obsidian.
-- [ ] Hice commit con un mensaje claro.
-- [ ] Publiqué la rama.
-- [ ] Expliqué qué cambió y cómo lo comprobé.
-- [ ] El pull request apunta a `main`.
-
-Antes de empezar otra tarea:
-
-- [ ] El responsable revisó y fusionó el pull request.
-- [ ] Cambié a `main`.
-- [ ] Descargué los cambios más recientes.
-- [ ] Creé una rama nueva.
+1. Abre el repositorio en GitHub y ve a **Settings > Rules > Rulesets** *(o **Settings > Branches** en la interfaz clásica)*.
+2. Crea un nuevo conjunto de reglas apuntando a la rama **`main`**.
+3. Activa las siguientes protecciones:
+   - ✅ **Restrict deletions** (Bloquear el borrado de `main`).
+   - ✅ **Block force pushes** (Bloquear subidas forzadas).
+   - ✅ **Require a pull request before merging**:
+     - Exigir al menos **1 aprobación** (*Required approvals: 1*).
+     - Exigir aprobación del propietario (*Require review from Code Owners* / responsable).
+     - Descartar aprobaciones antiguas si se suben nuevos commits (*Dismiss stale pull request approvals when new commits are pushed*).
+     - Exigir que todos los hilos de comentarios estén resueltos (*Require conversation resolution before merging*).
+4. Desactiva la opción de que los colaboradores puedan aprobar sus propios Pull Requests.
+5. Guarda los cambios y verifica el comportamiento con una cuenta de colaborador.
+</details>
