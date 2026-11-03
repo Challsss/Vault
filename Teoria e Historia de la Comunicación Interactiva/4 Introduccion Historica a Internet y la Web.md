@@ -20,7 +20,7 @@ Basada en los principios desarrollados por Paul Baran y Donald Davies, la inform
 ---
 # La Revolución de la World Wide Web (1989-1993)
 
-**Tim Berners-Lee y el CERN** entre 1989 y 1993, el científico británico Tim Berners-Lee creó la World Wide Web mientras trabajaba en el CERN en Ginebra- Su visión consistía en crear un espacio virtual donde cualquier fragmento de información de cualquier ordenador del mundo pudiera estar interconectado.
+**Tim Berners-Lee y el CERN** entre 1989 y 1993, el científico británico Tim Berners-Lee creó la World Wide Web mientras trabajaba en el CERN en Ginebra. Su visión consistía en crear un espacio virtual donde cualquier fragmento de información de cualquier ordenador del mundo pudiera estar interconectado.
 
 **Los tres pilares técnicos del WEB**
 1. **HTTP** (*Hypertext Transfer Protocol*): Protocolo de transferencia que regula la comunicación entre servidor y cliente.
