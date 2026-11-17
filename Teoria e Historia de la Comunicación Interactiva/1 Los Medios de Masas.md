@@ -14,7 +14,7 @@ Los periódicos modernos se desarrollan a mediados del siglo XIX mediante las ro
 ### Telecomunicación
 La telecomunicación se define etimológicamente como «comunicar a distancia», introduciendo la transmisión sincrónica («el directo») frente a los medios diacrónicos tradicionales.
 
-> [!Datillo]
+>[!info] Datillo
 > El primer medio de telecomunicación de la historia fue el **telégrafo**.
 
 La clave de la telecomunicación reside en la distancia física entre el emisor/medio y el receptor:
