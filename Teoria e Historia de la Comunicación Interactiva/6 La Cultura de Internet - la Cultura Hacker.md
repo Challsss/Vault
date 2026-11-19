@@ -23,13 +23,13 @@ Diferencia entre *hacker* y *cracker*: la ética *hacker* prohíbe el robo y se 
 ---
 # La Creación Emblemática: el Software Libre
 - **El modelo Linux**: Linus Torvalds creó el núcleo de Linux a los 22 años, convirtiéndolo en la máxima expresión del software de código abierto frente al software propietario.
-- **Software libre y modelo científico**: Garantiza el libre acceso al código fuente, su gratuidad y su redistribución. Se fundamenta en el mismo esquema de trabajo que la investigación universitaria tradicional: conocimiento de libre acceso y revisión pública por la comunidad.
+- **[[Software libre]] y modelo científico**: Garantiza el libre acceso al código fuente, su gratuidad y su redistribución. Se fundamenta en el mismo esquema de trabajo que la investigación universitaria tradicional: conocimiento de libre acceso y revisión pública por la comunidad.
 
 ---
 
 # Impacto en la Sociedad Digital
 
-La cultura *hacker* ha transformado de forma duradera la producción y distribución de contenidos:
+La [[Cultura hacker|cultura hacker]] ha transformado de forma duradera la producción y distribución de contenidos:
 - **Producción colaborativa**: Experimentos como la Wikipedia.
-- **Intercambio distribuido**: La arquitectura de redes *peer-to-peer* (P2P).
+- **Intercambio distribuido**: La arquitectura de redes *[[Peer-to-peer|peer-to-peer]]* (P2P).
 - **Debate sobre la propiedad intelectual**: Replanteamiento de las leyes de *copyright* en favor de licencias abiertas.

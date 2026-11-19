@@ -1,4 +1,4 @@
-El concepto del libro, donde se mira a la sociedad como un enjambre más que como una masa, viene de que antes la gente se unía en la calle como masas obreras o ciudadanas y tenía fuerza colectiva, pero en Internet no hay masa, sino un enjambre que funciona como individuos aislados detrás de una pantalla, sin contacto real, que solo se juntan para hacer ruido temporal (*shitstorms*) y luego se dispersan sin cambiar nada.
+El concepto del libro, donde se mira a la sociedad como un enjambre más que como una masa, viene de que antes la gente se unía en la calle como masas obreras o ciudadanas y tenía fuerza colectiva, pero en Internet no hay masa, sino un [[Enjambre digital|enjambre]] que funciona como individuos aislados detrás de una pantalla, sin contacto real, que solo se juntan para hacer ruido temporal (*shitstorms*) y luego se dispersan sin cambiar nada.
 
 ### Prólogo
 Básicamente, se hace una pequeña introducción a lo que parece ser el tema principal del libro: la ceguera social de las personas ante los medios digitales, las redes sociales y las jerarquías sociales.

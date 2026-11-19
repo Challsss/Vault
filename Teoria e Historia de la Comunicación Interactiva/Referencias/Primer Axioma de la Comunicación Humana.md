@@ -1,1 +1,3 @@
 Formulado por Paul Watzlawick, Janet Beavin y Don Jackson (*Pragmática de la comunicación humana*, 1967) desde la Escuela de Palo Alto, señalando la imposibilidad de la no conducta en situaciones de interacción.
+
+*Aparece en:* [[1 Los Medios de Masas]].
