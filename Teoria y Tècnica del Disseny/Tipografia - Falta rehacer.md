@@ -6,7 +6,7 @@ La palabra tipografía proviene de dos términos griegos:
 
 *Emil Ruder*
 
-"La tipografía tiene un propósito único: comunicar. Una tipografía es buena cuando cumple con su propósito"
+"La tipografía tiene un propósito único: comunicar. Una tipografía es buena cuando cumple con su propósito."
 
 *Jan Tschichold*
 
@@ -43,7 +43,7 @@ La palabra tipografía proviene de dos términos griegos:
 - La escritura era manual y laboriosa, pero refinada.
 ### Manuscritos y caligrafía
 ### Creación de nuevos alfabetos a partir del alfabeto romano
-### La Revolución de la imprenta
+### La revolución de la imprenta
 
 Es el momento en el que se pasa del manuscrito a los primeros libros impresos, como la Biblia de Gutenberg.
 
@@ -51,11 +51,11 @@ En este punto de la historia es cuando podemos empezar a hablar de tipografía c
 
 Con esto, las tipografías empezaron a ser más uniformes y refinadas.
 
-En los chibaletes tipográficos se guardaban en cada cajón las diferentes tipografías para poder usarlas según qué situaciones como mejor conviniera.
+En los chibaletes tipográficos se guardaban en cada cajón las diferentes tipografías para poder usarlas según qué situaciones, como mejor conviniera.
 
-Johan Gutenberg creó la primera fundición conocida para producir tipos móviles para su imprenta.
+Johannes Gutenberg creó la primera fundición conocida para producir tipos móviles para su imprenta.
 
-Aparecieron las fundiciones tipográficas que eran empresas o talleres especializados en el diseño, producción y distribución de tipos de letra de madera, metal y en la actualidad tipografías digitales. Una fundición de la época contemporánea podría ser Google Fonts.
+Aparecieron las fundiciones tipográficas, que eran empresas o talleres especializados en el diseño, producción y distribución de tipos de letra de madera, metal y, en la actualidad, tipografías digitales. Una fundición de la época contemporánea podría ser Google Fonts.
 
 Cuanto más avanzaba la técnica, se creaban tipografías más refinadas, como la tipografía renacentista.
 ### Tipografía barroca
@@ -63,9 +63,9 @@ El diseño tipográfico evolucionó hacia formas más precisas y elegantes.
 Impresores como William Caslon en Inglaterra introdujeron tipos que equilibraban la ornamentación.
 
 ### La industrialización
-Se pasó de tener que hacer las tipografías una a una a la linotipia que aceleraba mucho el proceso.
+Se pasó de tener que hacer las tipografías una a una a la linotipia, que aceleraba mucho el proceso.
 
-Por las nuevas demandas tipográficas de la era de la publicidad, nacieron las tipografías de estilo sans serif (sin serifa).
+Por las nuevas demandas tipográficas de la era de la publicidad, nacieron las tipografías de estilo *sans serif* (sin serifa).
 
 ### La modernidad y la Bauhaus
 

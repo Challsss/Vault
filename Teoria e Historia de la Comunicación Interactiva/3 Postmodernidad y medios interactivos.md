@@ -7,7 +7,7 @@ Nace de la pérdida de confianza en el progreso lineal y del desencanto provocad
 ### Crisis de los Grandes Relatos
 Jean-François Lyotard acuñó este pilar al señalar la obsolescencia de los "metarrelatos" o filosofías omnicomprensivas (como el cristianismo o el marxismo). En su lugar, surgen los "microrrelatos" fragmentados de carácter pragmático.
 ### Mutación de la Tecnología
-En la Modernidad, la tecnología era un elemento externo (máquinas e industrias pesadas). En la Posmodernidad, la tecnología **penetra en el propio individuo** y la realidad pasa a construirse principalmente en la mente de las personas, donde la apariencia prima sobre el hecho objetivo.
+En la Modernidad, la tecnología era un elemento externo (máquinas e industrias pesadas). En la Postmodernidad, la tecnología **penetra en el propio individuo** y la realidad pasa a construirse principalmente en la mente de las personas, donde la apariencia prima sobre el hecho objetivo.
 
 ---
 # La Sociedad Postindustrial (Daniel Bell, 1973)
@@ -35,12 +35,12 @@ Lyotard añade a esta lectura que en la sociedad postindustrial el saber cambia 
 
 **Neofilia y Lógica de la Moda**: La cultura se rige por la máxima de que "*todo lo nuevo es bello*" y por la continua renovación de tendencias.
 
-**Self-service Audiovisual**: El consumo se personaliza al máximo mediante la televisión a la carta, los servicios de *Video On Demand* (VOD) y las grabaciones personales, orientando los medios hacia el placer egoísta e individual.
+***Self-service* Audiovisual**: El consumo se personaliza al máximo mediante la televisión a la carta, los servicios de *Video On Demand* (VOD) y las grabaciones personales, orientando los medios hacia el placer egoísta e individual.
 
 **Felicidad Paradójica y la Era del Vacío**: Lipovetsky advierte que este consumo compulsivo de experiencias efímeras genera una "felicidad paradójica": la búsqueda incesante de satisfacción inmediata desencadena insatisfacción recurrente y un profundo vacío existencial.
 
 ---
 # Multiplicidad y la Transición a la Transmodernidad
-**Multiplicación de Visiones (Gianni Vattimo)**: Frente a las críticas catastróficas de la Posmodernidad, Vattimo sostiene que la proliferación de los *mass media* no homogeneizó a la sociedad, sino que liberó a múltiples culturas y subculturas, erosionando el "principio de realidad" único en favor de un caos plural con potencial emancipador.
+**Multiplicación de Visiones (Gianni Vattimo)**: Frente a las críticas catastróficas de la Postmodernidad, Vattimo sostiene que la proliferación de los *mass media* no homogeneizó a la sociedad, sino que liberó a múltiples culturas y subculturas, erosionando el "principio de realidad" único en favor de un caos plural con potencial emancipador.
 
 **La Transmodernidad (Rosa María Rodríguez Magda)**: Las fuentes más recientes señalan que la Red trasciende la mera fragmentación posmoderna. En la *Transmodernidad*, la tecnología ya no es una prótesis externa ni una simple herramienta, sino el medio ambiente mismo en el que habitamos (una *ciberontología*). Los algoritmos y la conectividad global constituyen el nuevo gran relato contemporáneo, donde el reto principal es reconstruir una ética compartida en medio de la hiperconexión.

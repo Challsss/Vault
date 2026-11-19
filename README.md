@@ -287,7 +287,7 @@ Haz clic en tu problema para ver cómo resolverlo sin perder nada:
 <summary>❓ <b>"He editado notas en Obsidian, pero en GitHub Desktop no aparece ningún cambio"</b></summary>
 <br>
 
-Comprueba estas cuatro cosas:
+Comprueba estas tres cosas:
 1. Que en Obsidian hayas guardado el archivo (`Ctrl + S` o `Cmd + S`).
 2. Que en GitHub Desktop (arriba a la izquierda) esté seleccionado el repositorio **`Vault`**.
 3. Que estés editando **la misma carpeta** que clonó GitHub Desktop y no otra copia suelta en tu ordenador. *(Puedes hacer clic derecho sobre `Vault` en GitHub Desktop y elegir **Show in Explorer / Finder** para ver exactamente cuál es la carpeta buena).*

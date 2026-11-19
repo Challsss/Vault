@@ -10,23 +10,22 @@
 ### ARPANET (1969) y la arquitectura sin centro
 Creado bajo el paraguas del Departamento de Defensa de EE. UU. e impulsado por universidades y centros de investigación (UCLA, Stanford, UC Santa Barbara, Utah), ARPANET nació en 1969 como una red experimental. Su característica clave era no tener un nodo centralizado: si un enlace fallaba, los datos buscaban rutas alternativas.
 ### La Conmutación de paquetes (*Packet Switching*)
-Basada en los principios desarrollados por Paul Baran y Donald Davies, la información no ocupa una línea fija como la telefonía tradicional. En su lugar, los mensajes se trocean en pequeños paquetes a los que se les añaden el remitente y el destino. Cada paquete viaja de forma independiente según el tráfico de los *routers* y se reordenan al llegar al nodo de destino.
+Basada en los principios desarrollados por Paul Baran y Donald Davies, la información no ocupa una línea fija como la telefonía tradicional. En su lugar, los mensajes se trocean en pequeños paquetes a los que se les añaden el remitente y el destino. Cada paquete viaja de forma independiente según el tráfico de los *routers* y todos se reordenan al llegar al nodo de destino.
 
 ### Primeros servicios e interconexión (TCP/IP)
-- En 1971 se realiza la primera transferencia de ficheros (FTP) y en 1973 el correo electrónico (creado por Ray Tomlinson) ya representaba el 75% del tráfico de ARPANET.
+- En 1971 se realiza la primera transferencia de ficheros (FTP) y en 1973 el correo electrónico (creado por Ray Tomlinson) ya representaba el 75 % del tráfico de ARPANET.
 
 - Para interconectar redes heterogéneas (por cable, radio PRnet o satélite SATnet), entre 1973 y 1983 se desarrolló el protocolo **TCP/IP** basado en el principio de comunicación "*best effort*" (entrega sin garantías donde los paquetes no recibidos se retransmiten). ARPANET se desmanteló finalmente en 1990.
 
 ---
 # La Revolución de la World Wide Web (1989-1993)
 
-**Tim Berners-Lee y el CERN** entre 1989 y 1993, el científico británico Tim Berners-Lee creó la World Wide Web mientras trabajaba en el CERN en Ginebra. Su visión consistía en crear un espacio virtual donde cualquier fragmento de información de cualquier ordenador del mundo pudiera estar interconectado.
 **Tim Berners-Lee y el CERN**: entre 1989 y 1993, el científico británico Tim Berners-Lee creó la World Wide Web mientras trabajaba en el CERN, en Ginebra. Su visión consistía en crear un espacio virtual donde cualquier fragmento de información de cualquier ordenador del mundo pudiera estar interconectado.
 
-**Los tres pilares técnicos de la web**
+**Los tres pilares técnicos de la web**:
 1. **HTTP** (*Hypertext Transfer Protocol*): Protocolo de transferencia que regula la comunicación entre servidor y cliente.
 2. **HTML** (*Hypertext Markup Language*): Lenguaje de marcado que permite estructurar textos con hipervínculos multimedia.
-3. **URL**  (*Uniform Resource Locator*): Sistema de dirección o número único para localizar cada recurso de la red.
+3. **URL** (*Uniform Resource Locator*): Sistema de dirección o número único para localizar cada recurso de la red.
 
 **Código abierto y universalidad**: el 30 de abril de 1993, el CERN liberó el código fuente de la WWW al dominio público de manera gratuita, convirtiéndola en un estándar abierto, descentralizado, multimedia y universal.
 

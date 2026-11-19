@@ -3,7 +3,7 @@
 > [!info] **Concepto de Cultura (Manuel Castells, 2009)**
 > Se define como el "*conjunto de valores y creencias que dan forma, orientan y motivan el comportamiento de las personas*".
 
-Diferencia entre *Hacker* y *Cracker*: La ética *hacker* prohíbe el robo y se centra en programar sin fines lucrativos por puro entusiasmo intelectual, concibiendo la socialización de la información como un deber ético para facilitar el acceso a recursos. Uno de los ejemplos más claros de *hacker* en nuestro país es Chema Alonso, mientras que un *cracker* también muy conocido en España sería Alcasec.
+Diferencia entre *hacker* y *cracker*: la ética *hacker* prohíbe el robo y se centra en programar sin fines lucrativos por puro entusiasmo intelectual, concibiendo la socialización de la información como un deber ético para facilitar el acceso a recursos. Uno de los ejemplos más claros de *hacker* en nuestro país es Chema Alonso, mientras que un *cracker* también muy conocido en España sería Alcasec.
 
 ---
 
@@ -17,7 +17,7 @@ Diferencia entre *Hacker* y *Cracker*: La ética *hacker* prohíbe el robo y se 
 
 ---
 # Ideología y recombinación del conocimiento
-- **Estructura social y meritocracia**: posee una inclinación antiautoritaria, en la que las jerarquías no dependen del dinero ni de títulos formales, sino del **reconocimiento del talento entre pares (*peer recognition*)** dentro de la comunidad.
+- **Estructura social y meritocracia**: posee una inclinación antiautoritaria, en la que las jerarquías no dependen del dinero ni de títulos formales, sino del **reconocimiento del talento [[inter pares]] (*peer recognition*)** dentro de la comunidad.
 - **Innovación acumulativa (Pekka Himanen, 2001)**: En *La ética hacker y el espíritu de la era de la información*, Himanen plantea que la recombinación es la fuente de la innovación: compartir los descubrimientos permite que sirvan de punto de apoyo para el trabajo de otros en una espiral de conocimiento significativo.
 
 ---
@@ -32,4 +32,4 @@ Diferencia entre *Hacker* y *Cracker*: La ética *hacker* prohíbe el robo y se 
 La cultura *hacker* ha transformado de forma duradera la producción y distribución de contenidos:
 - **Producción colaborativa**: Experimentos como la Wikipedia.
 - **Intercambio distribuido**: La arquitectura de redes *peer-to-peer* (P2P).
-- **Debate sobre la propiedad intelectual**: Replanteamiento de las leyes de copyright en favor de licencias abiertas.
+- **Debate sobre la propiedad intelectual**: Replanteamiento de las leyes de *copyright* en favor de licencias abiertas.

@@ -51,5 +51,5 @@ Mientras que el '+' hará que por defecto aparezca abierta y que se pueda cerrar
 
 También se pueden añadir títulos personalizados a los bloques de citas añadiendo el título justo después del tipo de bloque.
 
-> [!success] esto es un título personalizado
+> [!success] Esto es un título personalizado
 >prueba
